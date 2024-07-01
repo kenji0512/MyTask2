@@ -1,34 +1,24 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class BulletController : MonoBehaviour
-{
+{//いろいろ自分で他のやり方で試したがうまくいかず…
     [SerializeField] LayerMask _layerMask;
-    [SerializeField] Vector3 _frightPoint;
-    [SerializeField] GameObject _bullet;
-    [SerializeField] float _power = 10f;
-    const float deleteDistance = 35 * 35;   // 削除距離
+    [SerializeField] Vector3 _shot;
+    int frameCount = 0;             // フレームカウント
+    const int deleteFrame = 200;    // 削除フレーム
 
-    // Start is called before the first frame update
-    void Start()
+    public void SetVector(Vector3 vec)
     {
-        _frightPoint = transform.Find("BulletPoint").localPosition;
+        _shot = vec * 10 * _shot.magnitude;
     }
 
     // Update is called once per frame
     void Update()
     {
-        float _distance = (_frightPoint - transform.position).sqrMagnitude;
-
-        if (Input.GetKeyDown(KeyCode.Z))
+        this.transform.position += _shot * Time.deltaTime;
+        if (++frameCount > deleteFrame)
         {
-            Instantiate(_bullet,transform.position + _frightPoint, Quaternion.identity);
-            transform.Translate(_power * Time.deltaTime,0,0);
-        }
-        if (_distance > deleteDistance)
-        {
-            Destroy(_bullet);
+            Destroy( this.gameObject );
         }
     }
 }
