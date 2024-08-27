@@ -457,7 +457,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5b083cc6efc00443960fc1e1298cf44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _hp: 1
+  _hp: 3
   _player: {fileID: 1634454828}
   _prefab: {fileID: 8402241805255709527, guid: 0806a615f124ad84e9b33d4c571a0c8e, type: 3}
   _searchRadius: 200
@@ -643,7 +643,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5b083cc6efc00443960fc1e1298cf44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _hp: 1
+  _hp: 3
   _player: {fileID: 1634454828}
   _prefab: {fileID: 8402241805255709527, guid: 0806a615f124ad84e9b33d4c571a0c8e, type: 3}
   _searchRadius: 200
@@ -704,6 +704,7 @@ GameObject:
   - component: {fileID: 1634454830}
   - component: {fileID: 1634454829}
   - component: {fileID: 1634454832}
+  - component: {fileID: 1634454833}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -796,6 +797,19 @@ MonoBehaviour:
   _gvScale: 0.3
   _scale: 10
   _jumpPower: 2
+--- !u!114 &1634454833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1634454828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba875ea905965144cb713aa693706776, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _hp: 5
 --- !u!1 &1721634325
 GameObject:
   m_ObjectHideFlags: 0
@@ -893,7 +907,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5b083cc6efc00443960fc1e1298cf44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _hp: 1
+  _hp: 3
   _player: {fileID: 1634454828}
   _prefab: {fileID: 8402241805255709527, guid: 0806a615f124ad84e9b33d4c571a0c8e, type: 3}
   _searchRadius: 200
@@ -995,7 +1009,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5b083cc6efc00443960fc1e1298cf44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _hp: 1
+  _hp: 3
   _player: {fileID: 1634454828}
   _prefab: {fileID: 8402241805255709527, guid: 0806a615f124ad84e9b33d4c571a0c8e, type: 3}
   _searchRadius: 200
