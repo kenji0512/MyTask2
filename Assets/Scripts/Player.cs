@@ -1,4 +1,5 @@
 using UnityEngine;
+using static UnityEditor.Experimental.GraphView.GraphView;
 
 public class Player : MonoBehaviour   
 {
@@ -7,6 +8,7 @@ public class Player : MonoBehaviour
     [SerializeField] float _gvScale = 0.3f;
     [SerializeField] float _scale = 2.0f;
     [SerializeField] float _jumpPower = 1.0f;
+    [SerializeField] MausePointer _mausePos;
     float _jumpY = 0.0f;
     float _jtime = 0.0f;
 
@@ -42,5 +44,9 @@ public class Player : MonoBehaviour
             }
             this.transform.position = new Vector3(this.transform.position.x, y, this.transform.position.z);
         }
+
+        Vector3 distance = this.transform.position - _mausePos.transform.position;//‹——£‚ÌŒvŽZ
+        float rad = Mathf.Atan2(distance.y, distance.x);
+        this.transform.right = -1 * distance;
     }
 }
