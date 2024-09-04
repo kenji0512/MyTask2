@@ -1,15 +1,14 @@
 using UnityEngine;
+using UnityEngine.Timeline;
 
 public class EnemyBullet : MonoBehaviour
 {
     Player _player = null;
-    // Start is called before the first frame update
+
     void Start()
     {
         _player = GameObject.FindObjectOfType<Player>();
     }
-
-    // Update is called once per frame
     void Update()
     {
         this.transform.position += Vector3.left * 5 * Time.deltaTime;
