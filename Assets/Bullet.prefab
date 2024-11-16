@@ -98,3 +98,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _shotpower: {x: 5, y: 0, z: 0}
+  _bulletType: 1

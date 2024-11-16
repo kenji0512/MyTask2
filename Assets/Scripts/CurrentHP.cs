@@ -5,7 +5,7 @@ public class CurrentHP : MonoBehaviour
     [SerializeField] public int _hp = 5; 
     public int HP => _hp;
 
-    public void Damage()
+    public  void Damage()
     {
         Debug.Log($"{gameObject.name}Ç…É_ÉÅÅ[ÉW");
         _hp--;

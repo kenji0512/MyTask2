@@ -1,7 +1,7 @@
 using UnityEngine;
 using static UnityEditor.Experimental.GraphView.GraphView;
 
-public class Player : MonoBehaviour   
+public class Player : CurrentHP
 {
     [SerializeField] float _speed = 1.0f;
     [SerializeField] float _extinc = 0.3f;
@@ -14,6 +14,7 @@ public class Player : MonoBehaviour
 
     private void Start()
     {
+        GameManager.Instance.Register(this);
     }
 
     void Update()
@@ -45,8 +46,8 @@ public class Player : MonoBehaviour
             this.transform.position = new Vector3(this.transform.position.x, y, this.transform.position.z);
         }
 
-        Vector3 distance = this.transform.position - _mausePos.transform.position;//‹——£‚ÌŒvŽZ
-        float rad = Mathf.Atan2(distance.y, distance.x);
-        this.transform.right = -1 * distance;
+        //Vector3 distance = this.transform.position - _mausePos.transform.position;//‹——£‚ÌŒvŽZ
+        //float rad = Mathf.Atan2(distance.y, distance.x);
+        //this.transform.right = -1 * distance;
     }
 }
